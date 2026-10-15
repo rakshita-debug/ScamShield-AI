@@ -1,12 +1,7 @@
 print("================================")
-<<<<<<< Updated upstream
 print("          ScamShield AI")
 print("   AI Scam and Phishing Detector")
-=======
-print("       ScamShield AI")
-print(" AI Scam apy appnd Phishing Detector")
->>>>>>> Stashed changes
-print("================================")
+
 
 message = input("\nEnter a message or suspicious link: ")
 message_lower = message.lower()
