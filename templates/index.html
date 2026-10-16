@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScamShield-AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🛡️ ScamShield-AI</h1>
+        <p>Check messages and URLs for potential scam indicators.</p>
+        
+        <div class="input-group">
+            <label for="messageInput">Message Text:</label>
+            <textarea id="messageInput" placeholder="Paste suspicious SMS, email, or message text here..."></textarea>
+        </div>
+
+        <div class="input-group">
+            <label for="urlInput">URL / Link (Optional):</label>
+            <input type="text" id="urlInput" placeholder="e.g., http://example.com or bit.ly/xyz">
+        </div>
+
+        <button id="checkBtn">Analyze Threat</button>
+        
+        <div id="result" class="hidden">
+            <h3>Result</h3>
+            <p><strong>Verdict:</strong> <span id="verdictText"></span></p>
+            <p><strong>Risk Score:</strong> <span id="scoreText"></span>/100</p>
+            <p><strong>Reasons:</strong></p>
+            <ul id="reasonsList"></ul>
+            <p id="disclaimerText" class="disclaimer"></p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
